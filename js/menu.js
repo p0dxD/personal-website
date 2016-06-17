@@ -14,7 +14,7 @@ function toggleMenu(){
 }
 
 menu.addEventListener("click", toggleMenu);
-about.addEventListener("click", function(){scrollToTop(1000)});
+// about.addEventListener("click", function(){scrollToTop(1)});
 
 
 function openNav(){
@@ -47,12 +47,13 @@ function closeNav(){
 // 	}
 // };
 
-function scrollToTop(scrollDuration) {
-    var scrollStep = -window.scrollY / (scrollDuration / 15),
-        scrollInterval = setInterval(function(){
-        if ( window.scrollY != 0 ) {
-            window.scrollBy( 0, scrollStep );
-        }
-        else clearInterval(scrollInterval); 
-    },15);
-}
+
+// function scrollToTop(scrollDuration) {
+//     var scrollStep = -window.scrollY / (scrollDuration / 15),
+//         scrollInterval = setInterval(function(){
+//         if ( window.scrollY != 0 ) {
+//             window.scrollBy( 0, scrollStep );
+//         }
+//         else clearInterval(scrollInterval); 
+//     },15);
+// }

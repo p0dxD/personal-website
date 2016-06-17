@@ -12,8 +12,9 @@
 	<link rel="stylesheet" type="text/css" href="css/navigation.css">
 	<script src="js/data.js" type="text/javascript" charset="utf-8" async defer></script>
 	<script src="js/menu.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="js/canvas.js" type="text/javascript" charset="utf-8" async defer></script>
 </head>
-<body>
+<body onload="drawRectangles()"">
 	<nav>
 	<!-- <div class="test"> -->
 		
@@ -31,6 +32,7 @@
 	<div id="sidenav">
 		<ul>
 			<li id="go-to-about">About</li>
+			<li>Projects</li>
 		</ul>
 	</div>
 
@@ -39,15 +41,22 @@
 	<section class="module parallax parallax-1">
 		<!-- <div class="container intro"> -->
 					<div class="portrait">
+						
+					</div>
+					<div>
 						<p>Click here</p>
 					</div>
+				
 			<h1>Title</h1>
 			<h3>Subheader with more text</h3>
 		<!-- </div> -->
 	</section>	
 
 	<section class="module content about">
-	<p>TEst</p>
+	<p>ABOUT</p>
+	<canvas id="canvas" height="300" width="500">	</canvas>
+		<!-- <p class="about">TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT</p> -->
+
 	</section>
 
 	<section class="module parallax parallax-2">
@@ -68,6 +77,7 @@
 	<footer>
 		<ul>
 			<li>About</li>
+			<li class="to-top">To Top</li>
 		</ul>
 	</footer>
 	<!-- <script src="js/data.js" type="text/javascript" charset="utf-8" async defer></script> -->

@@ -1,6 +1,6 @@
 
 *{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     padding: 0;
 }
 
@@ -24,6 +24,7 @@ display: inline-block;
 }
 
 .change .bar1 {
+  position: fixed;
     -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
     transform: rotate(-45deg) translate(-9px, 6px) ;
 }
@@ -31,6 +32,7 @@ display: inline-block;
 .change .bar2 {opacity: 0;}
 
 .change .bar3 {
+  position: fixed;
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
 }
@@ -39,10 +41,6 @@ display: inline-block;
 
 
 /*FIRST BODY*/
-/*.container{
-    max-width: 960px;
-    margin: 0 auto;
-}*/
 
 .content{
         height: 500px;
@@ -121,7 +119,11 @@ h1, h3, h4{
 section h1, section h3{
     text-align: center;
     font-family: 'Trocchi';
-    color: #7c795d;
+    color: #ABDD8F;
+}
+
+section h1{
+  color: #A4EAD1;
 }
 
 .blurry {
@@ -132,8 +134,8 @@ section h1, section h3{
 
 
 
-.portrait > p{
-    display: none;
+.portrait:hover  + div{
+    visibility: visible;
 }
 
 
@@ -141,10 +143,15 @@ section h1, section h3{
   -webkit-filter: blur(2px);
   filter: blur(2px);
 }
-
-.portrait:hover + h4{
+/*.portrait:hover > p{
+  display: block;
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
+  z-index: 10;
+}*/
+/*.portrait:hover + h4{
     display: block;
-}
+}*/
 
 
 .portrait > p {
@@ -158,8 +165,12 @@ section h1, section h3{
     height: 200px;
     width: 200px;
     margin: 0 auto;
-
-}
+    background-image: url(http://energyexposition.com/wp-content/uploads/2012/09/blank-profile-hi.png);
+    background-size: 270px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    cursor: pointer;
+  }
 
 #go-to-about:hover{
     color: #99B2DD;
@@ -167,10 +178,12 @@ section h1, section h3{
 
 
 footer ul li{
-    display: none;
+    /*display: none;*/
 }
 
 footer ul li{
+    /*float: left;*/
+    text-align: center;
     animation: show 500ms linear;
     animation-fill-mode: forwards;
 }
@@ -178,3 +191,14 @@ footer ul li{
 @keyframes showFooter{
 
 }
+
+.portrait + div{
+    text-align: center;
+    margin-top: -120px;
+    margin-bottom: 100px;
+    /*visibility: hidden;*/
+}
+
+.about > p{
+  text-shadow: 8px 8px 0 rgba(255,0,180,0.5);
+} 

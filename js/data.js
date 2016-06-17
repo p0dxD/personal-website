@@ -54,7 +54,7 @@
 
 // $(".content").html(template(people));
 
-
+//PARALLAX function
 (function(){
 
   var parallax = document.querySelectorAll(".parallax"),
@@ -85,20 +85,38 @@
 
 })();
 
+//make stuff blurry on scroll
+  // var timer;
+  // $(window).on('scroll', function(e) {
+  //   // Apply blur filter to your elements by adding a class
+  //   $('.intro').addClass('blurry');
+  //   clearTimeout(timer);
+  //   timer = setTimeout(onScrollEnd, 1);
+  // });
+  // function onScrollEnd() {
+  //   // Remove blur filter from your elements by removing a class
+  //   $('.intro').removeClass('blurry');
+  //   console.log('Stopped Scrolling'); 
+  // }
 
-  var timer;
-  $(window).on('scroll', function(e) {
-    // Apply blur filter to your elements by adding a class
-    $('.intro').addClass('blurry');
-    clearTimeout(timer);
-    timer = setTimeout(onScrollEnd, 1);
-  });
-  function onScrollEnd() {
-    // Remove blur filter from your elements by removing a class
-    $('.intro').removeClass('blurry');
-    console.log('Stopped Scrolling'); 
-  }
 
+$("#go-to-about").click(function() {
+  $('html,body').animate({
+    scrollTop: $(".about").offset().top},
+    1500);
+});
+
+$(".portrait").click(function() {
+  $('html,body').animate({
+    scrollTop: $(".about").offset().top},
+    1500);
+});
+
+$(".to-top").click(function() {
+  $('html,body').animate({
+    scrollTop: $("body").offset().top},
+    1500);
+});
 
 // function showFooter(){
 	
@@ -137,7 +155,8 @@
 
 // <script id = "sentence-template" type="text/x-handlebars-template">
 
-// 	<p>This is a test template made in {{info}}. Other data includes {{data}} {{more}}.</p>
+// 	<p>This is a test template made in {{info}}. 
+//Other data includes {{data}} {{more}}.</p>
 // 	{{>fruits}}
 // </script>
 // <script id = "fruits-template" type="text/x-handlebars-template">
